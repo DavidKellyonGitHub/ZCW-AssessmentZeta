@@ -35,7 +35,23 @@ public class MultiplesDeleter {
      * given an array of integers, named `ints` return an identical array with odds removed
      */
     public Integer[] deleteOdds(Integer[] ints) {
-        return null;
+        int oddsCounter = 0;
+        for (int i = 0;i<ints.length;i++){
+            if (ints[i]%2!=0){
+                ints[i]= null;
+                oddsCounter++;
+            }
+        }
+        Integer[] evens = new Integer[ints.length-oddsCounter];
+        int counter2 = 0;
+        for (int i = 0;i<ints.length;i++){
+            if (ints[i]!=null){
+                evens[counter2] = ints[i];
+                counter2++;
+            }
+        }
+
+        return evens;
     }
 
     /**
