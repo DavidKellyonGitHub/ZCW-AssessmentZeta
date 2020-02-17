@@ -10,7 +10,23 @@ public class MultiplesDeleter {
      * given an array of integers, named `ints` return an identical array with evens removed
      */
     public Integer[] deleteEvens(Integer[] ints) {
-        return null;
+        int evensCounter = 0;
+        for (int i = 0;i<ints.length;i++){
+            if (ints[i]%2==0){
+                ints[i]= null;
+                evensCounter++;
+            }
+        }
+        Integer[] odds = new Integer[ints.length-evensCounter];
+        int counter2 = 0;
+        for (int i = 0;i<ints.length;i++){
+            if (ints[i]!=null){
+                odds[counter2] = ints[i];
+                counter2++;
+            }
+        }
+
+        return odds;
     }
 
     /**
