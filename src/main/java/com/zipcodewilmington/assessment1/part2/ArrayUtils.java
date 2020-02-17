@@ -11,7 +11,13 @@ public class ArrayUtils {
      * Given an array of objects, named `objectArray`, and an object `objectToCount`, return the number of times the `objectToCount` appears in the `objectArray`
      */
     public static Integer getNumberOfOccurrences(Object[] objectArray, Object objectToCount) {
-        return null;
+        int numOccurrences = 0;
+        for (int i = 0;i<objectArray.length;i++){
+            if (objectArray[i] == objectToCount){
+                numOccurrences++;
+            }
+        }
+        return numOccurrences;
     }
 
     /**
