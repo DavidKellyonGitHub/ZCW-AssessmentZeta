@@ -11,7 +11,26 @@ public class StringUtils {
      * given a string containing words delimited by spaces, representative of a sentence, return an array of strings, each element representative of a respective word in the sentence
      */
     public static String[] getWords(String sentence) {
-        return null;
+//        int wordCount = 1;
+//        for (int i = 0;i <sentence.length();i++){
+//            if (sentence.charAt(i) == ' '){
+//                wordCount++;
+//            }
+//        }
+//        String[] parsed = new String[wordCount];
+//        int counter1 = 0;
+//        int counter2 = 0;
+//        for (int i = 0;i< sentence.length();i++){
+//            if (sentence.charAt(i) != ' '){
+//                counter1++;
+//            } else if (sentence.charAt(i) == ' '){
+//                parsed[counter2] = sentence.substring(i-counter1,i);
+//                counter1 = 0;
+//                counter2++;
+//            }
+//        }
+//        return parsed;
+        return sentence.split(" ");
     }
 
 
