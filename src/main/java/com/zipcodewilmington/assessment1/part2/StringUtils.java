@@ -43,11 +43,11 @@ public class StringUtils {
         return sentence.split(" ")[0];
     }
 
-    /**
-     * @param sentence a string containing words delimited by spaces, representative of a sentence
-     * @return the first word in the specified sentence, with identical contents in reverse order
-     * given a string containing words delimited by spaces, representative of a sentence, return the first word with identical contents in reverse order
-     */
+//    /**
+//     * @param sentence a string containing words delimited by spaces, representative of a sentence
+//     * @return the first word in the specified sentence, with identical contents in reverse order
+//     * given a string containing words delimited by spaces, representative of a sentence, return the first word with identical contents in reverse order
+//     */
     public static String reverse(String str) {
         String reversed = "";
         for(int i = str.length()-1;i>=0;i--){
@@ -60,11 +60,11 @@ public class StringUtils {
         return reverse(getFirstWord(sentence));
     }
 
-    /**
-     * @param sentence a string containing words delimited by spaces, representative of a sentence
-     * @return the first word in the specified sentence, with identical contents in reverse order and the first character capitalized
-     * given a string containing words delimited by spaces, representative of a sentence, return the first word with identical contents in reverse order with the first character capitalized
-     */
+//    /**
+//     * @param sentence a string containing words delimited by spaces, representative of a sentence
+//     * @return the first word in the specified sentence, with identical contents in reverse order and the first character capitalized
+//     * given a string containing words delimited by spaces, representative of a sentence, return the first word with identical contents in reverse order with the first character capitalized
+//     */
 
     public static String reverseThenCamelCase(String str) {
         String reversed = "";
@@ -73,7 +73,6 @@ public class StringUtils {
         }
         String firstLetter = reversed.substring(0,1).toUpperCase();
         String restOfString = reversed.substring(1);
-
         return firstLetter + restOfString;
     }
 
@@ -89,7 +88,7 @@ public class StringUtils {
      * given a string and index, return an identical string excluding the character at the specified index
      */
     public static String removeCharacterAtIndex(String str, int index) {
-        return null;
+        return str.substring(0,index)+str.substring(index+1);
     }
 
 }
