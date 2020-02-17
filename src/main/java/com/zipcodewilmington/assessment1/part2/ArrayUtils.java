@@ -49,8 +49,18 @@ public class ArrayUtils {
      * @return the most frequently occurring object in the array
      * given an array of objects, named `objectArray` return the most frequently occuring object in the array
      */
-    public static Object getMostCommon(Object[] objectArray) {
-        return null;
+
+    public static Integer getMostCommon(Integer[] objectArray) {
+        int maxCount = 0;
+        int modeIndex = 0;
+        for (int i = 0; i < objectArray.length; i++) {
+            if (getNumberOfOccurrences(objectArray, objectArray[i]) > maxCount) {
+                maxCount = getNumberOfOccurrences(objectArray, objectArray[i]);
+                modeIndex = i;
+            }
+
+        }
+        return objectArray[modeIndex];
     }
 
 
