@@ -60,8 +60,26 @@ public class MultiplesDeleter {
      * given an array of integers, named `ints` return an identical array with numbers indivisible by 3 removed
      */
     public Integer[] deleteMultiplesOf3(Integer[] ints) {
-        return null;
+        int multipleCounter = 0;
+        for (int i = 0;i<ints.length;i++){
+            if (ints[i]%3==0){
+                ints[i]= null;
+                multipleCounter++;
+            }
+        }
+        Integer[] nonMultiples = new Integer[ints.length-multipleCounter];
+        int counter2 = 0;
+        for (int i = 0;i<ints.length;i++){
+            if (ints[i]!=null){
+                nonMultiples[counter2] = ints[i];
+                counter2++;
+            }
+        }
+
+        return nonMultiples;
+
     }
+
 
     /**
      * @param ints array of Integer objects
