@@ -47,7 +47,7 @@ public class BasicStringUtils {
      * @return string with identical contents excluding first and last character
      */
     public static String removeFirstAndLastCharacter(String str) {
-        return null;
+        return str.substring(1,str.length()-1);
     }
 
     /**
