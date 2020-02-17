@@ -55,6 +55,16 @@ public class BasicStringUtils {
      * @return string with identical characters, each with opposite casing
      */
     public static String invertCasing(String str) {
-        return null;
+        String oppositeCasing = "";
+        for (int i = 0;i < str.length();i++){
+            if (Character.isUpperCase(str.charAt(i))){
+                oppositeCasing += str.substring(i,i+1).toLowerCase();
+            } else if (Character.isLowerCase(str.charAt(i))){
+                oppositeCasing += str.substring(i,i+1).toUpperCase();
+            } else if (str.charAt(i) == ' '){
+                oppositeCasing += ' ';
+            }
+        }
+        return oppositeCasing;
     }
 }
