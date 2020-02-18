@@ -26,6 +26,7 @@ public class PetOwner {
     public PetOwner(){
         this.name = "Pet owner name";
     }
+
     public void assignOwnership(Pet[] pets){
         for (int i = 0;i<pets.length;i++){
             if (pets[i] != null){
